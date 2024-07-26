@@ -5,7 +5,7 @@ export const NavBackButton = styled.TouchableOpacity`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-top: 16px;
+  margin-top: 0px;
   justify-content: center;
   align-items: center;
 `;

@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { HomeScreen } from "./components/HomeScreen/HomeScreen";
 import { ProfileScreen } from "./components/ProfileScreen/ProfileScreen";
 import { NavBackButton } from "./components/common/HeaderNavbarBack/styles";
-// import { HeaderNavbarBack } from "./components/common/HeaderNavbarBack/HeaderNavBackButton";
+import { HeaderNavbarBackButton } from "./components/common/HeaderNavbarBack/HeaderNavBackButton";
 import { Button } from "react-native";
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -20,15 +20,14 @@ export default function App() {
           <Stack.Screen
             name="Profile"
             component={ProfileScreen}
-            options={{
+            options={({ navigation }) => ({
               headerStyle: {
                 backgroundColor: "#0a0c0e",
               },
               headerLeft: () => (
-                <NavBackButton onPress={() => navigator("Home")} />
+                <NavBackButton onPress={() => navigation.navigate("Home")}/>
               ),
-              // headerTitle: (navigation) => <HeaderNavbarBack {...navigation} />,
-            }}
+            })}
           />
         </Stack.Navigator>
       </NavigationContainer>

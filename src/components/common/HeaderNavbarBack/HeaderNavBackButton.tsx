@@ -1,4 +1,4 @@
-import { View, Text, Button, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import {
   SafeAreaView,
   useSafeAreaInsets,
@@ -10,6 +10,7 @@ import {
 } from "@expo-google-fonts/nunito";
 import { Container } from "../globalStyles";
 import { NavBackButton } from "./styles";
+import { Button } from "react-native-paper";
 
 export const HeaderNavbarBackButton = () => {
   // const [fontsLoaded, fontError] = useFonts({
@@ -19,5 +20,5 @@ export const HeaderNavbarBackButton = () => {
   // if (!fontsLoaded && !fontError) {
   //   return null;
   // }
-  return <></>;
+  return <Button icon="chevron-left" children={""}></Button>;
 };
