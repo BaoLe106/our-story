@@ -24,7 +24,7 @@ export default function App() {
             options={({ navigation }) => ({
               headerTitle: "",
               headerStyle: {
-                backgroundColor: "black",
+                backgroundColor: "#111111",
                 // shadowOpacity: 0,
                 // headerShadowVisible: false,
                 borderBottomWidth: 0,
